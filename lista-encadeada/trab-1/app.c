@@ -29,8 +29,10 @@ int main(){
 
             printf("idade: ");
             scanf("%i", &p.idade);
-
-            Insere(p, &lista);
+            
+            //Insere(p, &lista);
+            InsereOrdenado(p, &lista);
+            //InserePrimeiro(p, &lista);
         }
 
         else if(opc == 2){
@@ -40,11 +42,15 @@ int main(){
         }
 
         else if(opc == 3){
+            /*
             printf("codigo: ");
             scanf("%d", &codigo);
             
             item = Localiza(codigo, &lista);
             Retira(item, &lista);
+            */
+           //RetiraUltimo(&lista);
+           RetiraPrimeiro(&lista);
         }
 
         else if(opc == 4){

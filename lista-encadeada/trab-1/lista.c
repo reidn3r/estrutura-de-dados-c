@@ -20,9 +20,55 @@ void Insere (TipoItem x, TipoLista *Lista)
     Lista -> Ultimo -> Prox = NULL;
 }
 
+//Ex 1.
+void InsereOrdenado(TipoItem x, TipoLista *Lista){
+    Celula *item = (Celula *)malloc(sizeof(Celula));
+    Celula *ptr = (Celula *)malloc(sizeof(Celula));
 
-Celula* Localiza (int cod, TipoLista *Lista)
-{
+    ptr = Lista -> Primeiro;
+    item -> Item = x;
+
+    if(Lista -> Primeiro == Lista -> Ultimo){
+        Lista -> Primeiro -> Prox = item;
+        Lista -> Ultimo = item;
+        Lista -> Ultimo -> Prox = NULL;
+    }
+    else{
+        while(ptr -> Prox != NULL){
+            if(item -> Item.chave <= ptr -> Prox -> Item.chave ){
+                item -> Prox = ptr -> Prox;
+                ptr -> Prox = item;
+                break;
+            }
+            ptr = ptr->Prox;
+        }
+        if(ptr -> Prox == NULL){
+            ptr -> Prox = item;
+            item -> Prox = NULL;
+            Lista -> Ultimo = item;
+        }
+    }
+}
+
+//Ex 2.
+void InserePrimeiro(TipoItem x, TipoLista *Lista){
+    Celula *item = (Celula *)malloc(sizeof(Celula));
+    item -> Item = x;
+    //Lista vazia:
+    if(Lista -> Primeiro == Lista -> Ultimo){
+        Lista -> Primeiro -> Prox = item;
+        Lista -> Ultimo = item;
+        Lista -> Ultimo -> Prox = NULL;
+    }
+    else{
+        //lista nao vazia
+        item -> Prox = Lista -> Primeiro -> Prox;
+        Lista -> Primeiro -> Prox = item;
+    }
+}
+
+
+Celula* Localiza (int cod, TipoLista *Lista){
     Celula* paux;
     paux = Lista->Primeiro;
     while ((paux->Prox != NULL) && (paux->Prox->Item.chave != cod))
@@ -47,15 +93,54 @@ void Retira (Celula* p, TipoLista *Lista){
 }
 
 
+//Ex 3.
+void RetiraUltimo(TipoLista *Lista){
+    if(Lista -> Primeiro == Lista -> Ultimo){
+        printf("Lista vazia.\n");
+    }
+    else{
+        Celula *aux = (Celula *)malloc(sizeof(Celula));
+        aux = Lista -> Primeiro;
+        while(aux -> Prox -> Prox != NULL){
+            aux = aux -> Prox;
+        }
+        free(aux -> Prox);
+        aux -> Prox = NULL;
+        Lista -> Ultimo = aux;
+    }
+}
+
+//Ex 4.
+void RetiraPrimeiro(TipoLista *Lista){
+    if(Lista -> Primeiro == Lista -> Ultimo){
+        printf("Lista vazia.\n");
+    }
+    else{
+        Celula *aux = (Celula *)malloc(sizeof(Celula));
+        aux = Lista -> Primeiro -> Prox;
+        Lista -> Primeiro -> Prox = aux -> Prox;
+        if(aux -> Prox == NULL){
+            Lista->Ultimo = Lista->Primeiro;
+        }
+        free(aux);
+    }
+}
+
 void Imprime (TipoLista Lista){
     Celula* Aux;
     int i=1;
     Aux = Lista.Primeiro -> Prox;
-    while (Aux != NULL){
-        printf ("\n\nCodigo do elemento %d: %d", i, Aux->Item.chave);
-        printf ("\nNome do elemento %d: %s", i, Aux->Item.nome);
-        printf ("\nIdade do elemento %d: %d\n\n", i, Aux->Item.idade);
-        Aux=Aux->Prox;
-        i++;
-        }
+    if(Lista.Primeiro == Lista.Ultimo){
+        printf("Lista vazia.\n");
+    }
+    else{
+        while (Aux != NULL){
+            printf ("\n\nCodigo do elemento %d: %d", i, Aux->Item.chave);
+            printf ("\nNome do elemento %d: %s", i, Aux->Item.nome);
+            printf ("\nIdade do elemento %d: %d\n\n", i, Aux->Item.idade);
+            Aux=Aux->Prox;
+            i++;
+            }
+
+    }
 }
