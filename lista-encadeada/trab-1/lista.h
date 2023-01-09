@@ -3,9 +3,8 @@
 
 typedef struct{
     int chave;
-    char nome [30];
+    char nome [30]; 
     int idade;
-    //outros campos
 }TipoItem;
 
 typedef struct Celula{
@@ -20,7 +19,7 @@ typedef struct{
 }TipoLista;
 
 
-void FLVazia (TipoLista * Lista);
+void FLVazia (TipoLista *Lista);
 
 int Vazia (TipoLista Lista);
 

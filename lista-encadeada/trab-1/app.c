@@ -31,14 +31,12 @@ int main(){
             scanf("%i", &p.idade);
             
             //Insere(p, &lista);
-            InsereOrdenado(p, &lista);
             //InserePrimeiro(p, &lista);
+            InsereOrdenado(p, &lista);
         }
 
-        else if(opc == 2){
-            int resp;
-            resp = Vazia(lista); //?
-            printf("%d\n", resp);
+        else if(opc == 2){ 
+            printf("%d\n", Vazia(lista));
         }
 
         else if(opc == 3){
@@ -49,14 +47,13 @@ int main(){
             item = Localiza(codigo, &lista);
             Retira(item, &lista);
             */
-           //RetiraUltimo(&lista);
-           RetiraPrimeiro(&lista);
+           RetiraUltimo(&lista);
+           //RetiraPrimeiro(&lista);
         }
 
         else if(opc == 4){
             Imprime(lista);
         }
-
     }
     while(opc > 0);
 
