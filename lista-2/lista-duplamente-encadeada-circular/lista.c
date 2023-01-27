@@ -11,19 +11,22 @@ void InsereFinal(TipoLista *lista, TipoItem x){
         lista->Primeiro = (Celula*)malloc(sizeof(Celula));
         lista->Primeiro->item = x;
         lista->Primeiro->Prox = lista->Primeiro;
+        lista->Primeiro->Ant = lista->Primeiro;
         lista->Primeiro->Ant = NULL;
     }
     else{
         Celula *aux = lista -> Primeiro;
-        while(aux->Prox != NULL){
+        while(aux->Prox != lista -> Primeiro){
             aux = aux -> Prox;
         }
         Celula *Item = (Celula*)malloc(sizeof(Celula));
         Item -> item = x;
+
         Item -> Prox = lista -> Primeiro;
+        Item -> Ant = aux;
 
         aux -> Prox = Item;
-        Item -> Ant = aux;
+        lista -> Primeiro -> Ant = Item;
     }
 }
 
@@ -38,12 +41,12 @@ void Print(TipoLista *lista){
         printf("idade: %d\n", aux->item.idade);
         printf("\n");
 
-        while(aux != lista -> Primeiro){
+        while(aux -> Prox != lista -> Primeiro){
+            aux = aux -> Prox;
             printf("chave: %d\n", aux->item.chave);
             printf("nome: %s\n", aux->item.nome);
             printf("idade: %d\n", aux->item.idade);
             printf("\n");
-            aux = aux -> Prox;
         }
     }
 }
