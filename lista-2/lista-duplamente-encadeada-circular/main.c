@@ -27,8 +27,13 @@ int main(){
             InsereFinal(&lista, x);
         }
 
-        if(opc == 2){
+        else if(opc == 2){
             Print(&lista);
+        }
+        
+        //Ex. 5 ...
+        else if(opc == 3){
+            RemoveInicio(&lista);
         }
 
     }while(opc > 0);

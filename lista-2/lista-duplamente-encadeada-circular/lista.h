@@ -21,6 +21,9 @@ void FLVazia(TipoLista *lista);
 
 void InsereFinal(TipoLista *lista, TipoItem x);
 
+//Ex. 5 ...
+void RemoveInicio(TipoLista *lista);
+
 void Print(TipoLista *lista);
 
 #endif
