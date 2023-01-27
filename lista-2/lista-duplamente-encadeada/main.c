@@ -10,11 +10,12 @@ int main(){
     FLVazia(&lista);
 
     do{
-        printf("1) Insert.\n");
-        printf("2) Print.\n");
+        printf("1) Inserir Final.\n");
+        printf("2) Insere Inicio.\n");
         printf("3) Print reverso.\n");
-        printf("4) Insere Inicio.\n");
+        printf("4) Print.\n");
         printf("5) Remove Final.\n");
+        printf("6) Status.\n");
         scanf("%d", &opc);
 
         if(opc == 1){
@@ -30,7 +31,7 @@ int main(){
             Insere(&lista, x);
         }
 
-        else if(opc == 2){
+        else if(opc == 4){
             Print(&lista);
         }
 
@@ -38,7 +39,7 @@ int main(){
             PrintREV(&lista);
         }
 
-        else if(opc == 4){
+        else if(opc == 2){
             printf("key: ");
             scanf("%d", &x.chave);
 
@@ -53,6 +54,10 @@ int main(){
 
         else if(opc == 5){
             RemoveFinal(&lista);
+        }
+
+        else if(opc == 6){
+            Status(&lista);
         }
 
     }while(opc > 0);

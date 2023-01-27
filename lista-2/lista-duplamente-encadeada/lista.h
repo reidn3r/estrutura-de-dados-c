@@ -32,4 +32,6 @@ void Print(TipoLista *lista);
 
 void PrintREV(TipoLista *lista);
 
+void Status(TipoLista *lista);
+
 #endif

@@ -19,21 +19,17 @@ void Insere(TipoLista *lista, TipoItem x){
 
 //Ex. 3
 void InsereInicio(TipoLista *lista, TipoItem x){
-    Celula *ipt = (Celula *)malloc(sizeof(Celula));
-    ipt -> item = x;
-
+    Celula *Item = (Celula *)malloc(sizeof(Celula));
+    Item -> item = x;
     if(lista -> Primeiro == lista -> Ultimo){
-        lista -> Ultimo = (Celula *)malloc(sizeof(Celula));
-        lista -> Ultimo -> item = x;
-        lista -> Primeiro -> Prox = lista -> Ultimo;
+        Insere(lista, x);
     }
-
     else{
-        Celula *ipt = (Celula *)malloc(sizeof(Celula));
-        ipt -> item = x;
-        ipt -> Prox = lista -> Primeiro -> Prox;
-        ipt -> Ant = lista -> Primeiro;
-        lista -> Primeiro -> Prox = ipt;
+        Item -> Ant = lista -> Primeiro;
+        Item -> Prox = lista -> Primeiro -> Prox;
+        
+        lista -> Primeiro -> Prox -> Ant = Item;
+        lista -> Primeiro -> Prox = Item;
     }
     
 }
@@ -45,12 +41,11 @@ void RemoveFinal(TipoLista *lista){
     }
     else{
         Celula *aux = lista -> Ultimo -> Ant;
-        free(lista -> Ultimo);
         aux -> Prox = NULL;
+        free(lista -> Ultimo);
         lista -> Ultimo = aux;
     }
 }
-
 
 void Print(TipoLista *lista){
     if(lista->Primeiro == lista->Ultimo){
@@ -75,7 +70,7 @@ void PrintREV(TipoLista *lista){
         printf("Lista vazia.\n");
     }
     else{
-        Celula *aux = (Celula *)malloc(sizeof(Celula));
+        Celula *aux;
         aux = lista -> Ultimo;
         while(aux != lista -> Primeiro){
             printf("chave: %d\n", aux -> item.chave);
@@ -86,4 +81,15 @@ void PrintREV(TipoLista *lista){
         }
     }
     printf("\n");
+}
+
+void Status(TipoLista *lista){
+    if(lista -> Primeiro == lista -> Ultimo){
+        printf("Lista Primeiro Prox: NULL\n");
+        printf("Lista Ultimo: NULL\n");
+    }
+    else{
+        printf("Lista Primeiro Prox: %d\n", lista->Primeiro->Prox->item.chave);
+        printf("Lista Ultimo: %d\n", lista->Ultimo->item.chave);
+    }
 }
