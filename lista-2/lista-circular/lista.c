@@ -101,6 +101,7 @@ TipoLista CopiaLista(TipoLista *lista){
 
         if(aux -> Prox == lista -> Primeiro){
             copy->Prox = copy;
+            return lista_copia;
         }
         else{
             while(aux->Prox != lista -> Primeiro){
