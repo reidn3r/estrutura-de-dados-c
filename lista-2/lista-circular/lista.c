@@ -19,8 +19,7 @@ void Insere(TipoLista *lista, TipoItem x){
         Item -> Prox = Item;
     }
     else{
-        Celula *aux = (Celula *)malloc(sizeof(Celula));
-        aux = lista -> Primeiro;
+        Celula *aux = lista -> Primeiro;
         while(aux -> Prox != lista->Primeiro){
             aux = aux -> Prox;
         }
@@ -35,8 +34,7 @@ void Print(TipoLista *lista){
         printf("Lista vazia.\n");
     }
     else{
-        Celula *aux = (Celula *)malloc(sizeof(Celula));
-        aux = lista -> Primeiro;
+        Celula *aux = lista -> Primeiro;
         printf("chave: %d\n", aux->item.chave);
         printf("nome: %s\n", aux->item.nome);
         printf("idade: %d\n", aux->item.idade);
@@ -58,14 +56,13 @@ void Conta(TipoLista *lista){
         printf("Lista vazia.\n");
     }
     else{
-        Celula *aux = (Celula *)malloc(sizeof(Celula));
+        Celula *aux = lista -> Primeiro; 
         int cont=1;
-        aux = lista -> Primeiro;
         while(aux -> Prox != lista -> Primeiro){
             aux = aux->Prox;
             cont++;
         }
-        printf("contidadem: %d\n", cont);
+        printf("Contagem: %d\n", cont);
     }
 }
 
@@ -96,8 +93,7 @@ TipoLista CopiaLista(TipoLista *lista){
         TipoLista lista_copia;
         FLVazia(&lista_copia);
 
-        Celula *aux = (Celula *)malloc(sizeof(Celula));
-        aux = lista -> Primeiro;
+        Celula *aux = lista -> Primeiro;
 
         Celula *copy = (Celula *)malloc(sizeof(Celula));
         copy->item = aux->item;

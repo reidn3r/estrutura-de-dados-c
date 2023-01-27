@@ -70,8 +70,7 @@ void PrintREV(TipoLista *lista){
         printf("Lista vazia.\n");
     }
     else{
-        Celula *aux;
-        aux = lista -> Ultimo;
+        Celula *aux = lista -> Ultimo;
         while(aux != lista -> Primeiro){
             printf("chave: %d\n", aux -> item.chave);
             printf("nome: %s\n", aux -> item.nome);
