@@ -11,8 +11,7 @@ void InsereFinal(TipoLista *lista, TipoItem x){
         lista->Primeiro = (Celula*)malloc(sizeof(Celula));
         lista->Primeiro->item = x;
         lista->Primeiro->Prox = lista->Primeiro;
-        lista->Primeiro->Ant = lista->Primeiro;
-        lista->Primeiro->Ant = NULL;
+        lista->Primeiro->Ant = lista -> Primeiro;
     }
     else{
         Celula *aux = lista -> Primeiro;
