@@ -12,6 +12,7 @@ int main(){
     do{
         printf("1) Insert.\n");
         printf("2) Print.\n");
+        printf("3) Remove Inicio.\n");
         scanf("%d", &opc);
 
         if(opc == 1){
@@ -31,7 +32,7 @@ int main(){
             Print(&lista);
         }
         
-        //Ex. 5 ...
+        //Ex. 5
         else if(opc == 3){
             RemoveInicio(&lista);
         }
