@@ -10,7 +10,7 @@ int main(){
     FLVazia(&lista);
 
     do{
-        printf("1) Insert.\n");
+        printf("1) Inserir.\n");
         printf("2) Print.\n");
         printf("3) Remove Inicio.\n");
         scanf("%d", &opc);

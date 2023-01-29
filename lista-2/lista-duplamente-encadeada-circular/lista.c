@@ -30,6 +30,7 @@ void InsereFinal(TipoLista *lista, TipoItem x){
     }
 }
 
+//Ex. 5
 void RemoveInicio(TipoLista *lista){
     if(lista -> Primeiro == NULL){
         printf("Lista vazia.\n");
@@ -38,6 +39,12 @@ void RemoveInicio(TipoLista *lista){
         Celula *aux = lista -> Primeiro -> Prox;
         lista -> Primeiro -> Ant -> Prox = aux;
         aux -> Ant = lista -> Primeiro -> Ant;
+
+        /*
+            * Caso lista->Primeiro == aux (lista só tem 1 célula):
+                - Desaloca memória de lista -> Primeiro e aponta pra NULL
+                - Se não, aponta pra aux.
+        */
         if(lista -> Primeiro == aux){
             free(lista -> Primeiro);
             lista -> Primeiro = NULL;
