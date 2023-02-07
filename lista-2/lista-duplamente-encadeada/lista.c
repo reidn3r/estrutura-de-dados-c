@@ -30,8 +30,7 @@ void InsereInicio(TipoLista *lista, TipoItem x){
         
         lista -> Primeiro -> Prox -> Ant = Item;
         lista -> Primeiro -> Prox = Item;
-    }
-    
+    }   
 }
 
 //Ex. 4
