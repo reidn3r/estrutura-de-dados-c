@@ -11,6 +11,7 @@ int main(){
     FPVazia(&pilha);
 
     do{
+        printf("valor<0) Sair .\n");
         printf("1) Empilhar.\n");
         printf("2) Print.\n");
         printf("3) Print na ordem inserida.\n");

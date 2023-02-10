@@ -11,6 +11,7 @@ int main(){
     FFVazia(&fila);
 
     do{
+        printf("valor<0) Sair .\n");
         printf("1) Enfileirar.\n");
         // printf("2) Print.\n");
         

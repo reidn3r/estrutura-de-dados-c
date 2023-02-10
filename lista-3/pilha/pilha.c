@@ -78,7 +78,7 @@ void RemoveChave(TipoPilha *pilha, int c){
         TipoPilha pilha_aux;
         FPVazia(&pilha_aux);
 
-        while(pilha->Topo->item.chave != c && pilha->Topo != NULL){
+        while(pilha->Topo!=NULL && pilha->Topo->item.chave!=c){
             Empilha(&pilha_aux, pilha->Topo->item);
             Desempilha(pilha, &pilha->Topo->item);
         }
@@ -89,7 +89,7 @@ void RemoveChave(TipoPilha *pilha, int c){
         */
 
         if(pilha->Tamanho == 0){
-            printf("Chave nao encontrada");
+            printf("Chave nao encontrada\n");
             while(pilha_aux.Topo != NULL){
                 Empilha(pilha, pilha_aux.Topo->item);
                 Desempilha(&pilha_aux, &pilha_aux.Topo->item);
