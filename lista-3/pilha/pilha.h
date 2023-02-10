@@ -22,10 +22,13 @@ void Empilha(TipoPilha *pilha, TipoItem x);
 
 void Desempilha(TipoPilha *pilha, TipoItem *Item);
 
+//Exercício 2???
+void PrintREV(TipoPilha *pilha);
+
+//Exercício 4
 void RemoveChave(TipoPilha *pilha, int key);
 
-void Print(TipoPilha *pilha);
 
-void PrintREV(TipoPilha *pilha);
+void Print(TipoPilha *pilha);
 
 #endif

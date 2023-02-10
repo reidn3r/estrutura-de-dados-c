@@ -12,7 +12,7 @@ int main(){
 
     do{
         printf("1) Enfileirar.\n");
-        printf("2) Print.\n");
+        // printf("2) Print.\n");
         
         scanf("%d", &opc);
 
@@ -22,12 +22,15 @@ int main(){
             Enfileirar(&fila, x);
         }
 
-        else if(opc == 2){
-            PrintFila(&fila);
-        }
+        // else if(opc == 2){
+        //     PrintFila(&fila);
+        // }
 
     }while(opc > 0);
 
+    /*
+        Implementação do exercício 3
+    */
     TipoFila fila_inv;
     fila_inv = InverteFila(&fila);
     printf("Fila invertida:\n");

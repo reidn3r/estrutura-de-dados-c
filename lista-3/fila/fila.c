@@ -43,15 +43,14 @@ void PrintFila(TipoFila *Fila){
         printf("Fila vazia.\n");
     }
     else{
-        Celula *aux = Fila -> Inicio;
-        while(aux != NULL){
-            printf("chave: %d\n", aux -> item.chave);
-            aux = aux -> Prox;
+        while(Fila -> Inicio != NULL){
+            printf("chave: %d\n", Fila->Inicio-> item.chave);
+            Desinfileirar(Fila, Fila->Inicio->item);
         }
-        printf("\n\n");
     }
 }
 
+//Exercício 3
 TipoFila InverteFila(TipoFila *Fila){
     if(Fila -> Fim == NULL){
         printf("Fila vazia.\n");
@@ -75,3 +74,6 @@ TipoFila InverteFila(TipoFila *Fila){
         return fila_inv;
     }
 }
+
+
+

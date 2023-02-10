@@ -35,6 +35,23 @@ void Desempilha(TipoPilha *pilha, TipoItem *Item){
         }
     }
 }
+
+
+void Print(TipoPilha *pilha){
+    if(pilha -> Topo == NULL){
+        printf("Pilha vazia\n");
+    }
+    else{
+        while(pilha -> Topo != NULL){
+            printf("chave: %d\n", pilha->Topo-> item.chave);
+            Desempilha(pilha, &pilha->Topo->item);
+        } 
+        printf("\n\n");
+    }
+}
+
+
+//Exercício 2
 void PrintREV(TipoPilha *pilha){
     if(pilha -> Topo == NULL){
         printf("Pilha vazia.\n");
@@ -51,6 +68,7 @@ void PrintREV(TipoPilha *pilha){
     } 
 }
 
+//Exercício 4
 void RemoveChave(TipoPilha *pilha, int c){
     if(pilha -> Topo == NULL){
         printf("pilha vazia.\n");
@@ -88,25 +106,5 @@ void RemoveChave(TipoPilha *pilha, int c){
                 Desempilha(&pilha_aux, &pilha_aux.Topo->item);
             }
         }
-    }
-}
-
-/*
-
-    *** APAGAR ***
-
-*/
-
-void Print(TipoPilha *pilha){
-    if(pilha -> Topo == NULL){
-        printf("Pilha vazia\n");
-    }
-    else{
-        Celula *aux = pilha -> Topo;
-        while(aux != NULL){
-            printf("chave: %d\n", aux -> item.chave);
-            aux = aux -> Prox;
-        } 
-        printf("\n\n");
     }
 }
