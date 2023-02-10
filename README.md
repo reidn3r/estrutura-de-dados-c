@@ -10,7 +10,7 @@
 - Lista Encadeada Linear
 - Lista Encadeada Circular
 - Lista Duplamente Encadeada
-- Filas (em breve)
-- Pilhas (em breve)
+- Filas
+- Pilhas
 - Arvores (em breve)
 - Tabela Hash (em breve)
