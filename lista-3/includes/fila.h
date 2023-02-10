@@ -1,6 +1,6 @@
 #ifndef FILA
 #define FILA
-#include "../pilha/pilha.h"
+#include "pilha.h"
 #include <stdio.h>
 #include <stdlib.h>
 

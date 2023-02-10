@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "pilha.h"
+#include "../includes/fila.h"
+    //pilha.h incluso no fila.h
 
 void FPVazia(TipoPilha *pilha){
     pilha -> Topo = NULL;
