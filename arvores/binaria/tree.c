@@ -4,8 +4,6 @@
 
 void Initialize(Tree *T){
     T -> root = NULL;
-    printf("tree initialized.\n");
-    // return Root;
 }
 
 void LeftInsert(Node *node, Register x){
@@ -67,5 +65,21 @@ void InOrdem(Node *root){
         InOrdem(root -> left);
         printf("%d ", root -> reg.key);
         InOrdem(root -> right);
+    }
+}
+
+void PreOrdem(Node *root){
+    if(root != NULL){
+        printf("%d ", root -> reg.key);
+        PreOrdem(root -> left);
+        PreOrdem(root -> right);
+    }
+}
+
+void PosOrdem(Node *root){
+    if(root != NULL){
+        PosOrdem(root -> left);
+        PosOrdem(root -> right);
+        printf("%d ", root -> reg.key);
     }
 }

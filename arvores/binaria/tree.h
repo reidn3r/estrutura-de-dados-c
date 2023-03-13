@@ -21,4 +21,8 @@ void Insert(Tree *tree, Register x);
 
 void InOrdem(Node *root);
 
+void PreOrdem(Node *root);
+
+void PosOrdem(Node *root);
+
 #endif

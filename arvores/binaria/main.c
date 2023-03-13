@@ -12,6 +12,8 @@ int main(){
     do{
         printf("\n1) Insert.\n");
         printf("2) In Ordem.\n");
+        printf("3) Pre Ordem.\n");
+        printf("4) Pos Ordem.\n");
         scanf("%d", &opc);
 
         if(opc == 1){
@@ -22,6 +24,15 @@ int main(){
         else if(opc == 2){
             InOrdem(T.root);
         }
+
+        else if(opc == 3){
+            PreOrdem(T.root);
+        }
+
+        else if(opc == 4){
+            PosOrdem(T.root);
+        }
+
     }while(opc > 0);
 
     return 0;
