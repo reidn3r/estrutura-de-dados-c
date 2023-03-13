@@ -109,3 +109,16 @@ void RemoveChave(TipoPilha *pilha, int c){
         }
     }
 }
+
+void ApagaPilha(TipoPilha *pilha){
+    if(pilha->Topo==NULL){
+        system("break");
+    }
+    else{
+        while(pilha -> Topo != NULL){
+            Desempilha(pilha, &pilha->Topo->item);
+        }
+        pilha -> Topo = NULL;
+        pilha->Fundo = pilha -> Topo;
+    }
+}

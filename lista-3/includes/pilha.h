@@ -28,6 +28,8 @@ void PrintREV(TipoPilha *pilha);
 //Exercício 4
 void RemoveChave(TipoPilha *pilha, int key);
 
+void ApagaPilha(TipoPilha *pilha);
+
 void Print(TipoPilha *pilha);
 
 #endif

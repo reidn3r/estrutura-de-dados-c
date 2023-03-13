@@ -41,6 +41,8 @@ int main(){
             RemoveChave(&pilha, key);
         }
     }while(opc > 0);
+
+    ApagaPilha(&pilha);
     
     return 0;
 }
