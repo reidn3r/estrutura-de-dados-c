@@ -6,9 +6,8 @@ int main(){
 
     int opc;
     Register x;
-    Tree T;
-    Initialize(&T);
-    
+    Node *root;
+    root = Initialize(root);    
     int s=0;
 
     do{
@@ -22,25 +21,25 @@ int main(){
         if(opc == 1){
             printf("key: ");
             scanf("%d", &x.key);
-            Insert(&T, x);
+            root = Insert(root, x);
         }
         else if(opc == 2){
             printf("\n");
-            InOrdem(T.root);
+            InOrdem(root);
         }
 
         else if(opc == 3){
             printf("\n");
-            PreOrdem(T.root);
+            PreOrdem(root);
         }
 
         else if(opc == 4){
             printf("\n");
-            PosOrdem(T.root);
+            PosOrdem(root);
         }
 
         else if(opc == 5){
-            Conta(T.root, &s);
+            Conta(root, &s);
             printf("cont: %d\n", s);
         }
 

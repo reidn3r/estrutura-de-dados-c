@@ -2,63 +2,30 @@
 #include <stdlib.h>
 #include "tree.h"
 
-void Initialize(Tree *T){
-    T -> root = NULL;
+Node *Initialize(Node *root){
+    root = NULL;
+    return root;
 }
 
-void LeftInsert(Node *node, Register x){
-    if(node -> left == NULL){
+Node *Insert(Node *root, Register x){
+    if(root == NULL){
         Node *newNode = (Node *)malloc(sizeof(Node));
         newNode -> reg = x;
         newNode -> left = NULL;
         newNode -> right = NULL;
-        node -> left = newNode;
+        return newNode;
     }
     else{
-        if(x.key < node->left->reg.key){
-            LeftInsert(node -> left, x);
+        if(x.key < root->reg.key){
+            root -> left = Insert(root->left, x);
         }
         else{
-            LeftInsert(node -> right, x);
+            root -> right = Insert(root -> right, x);
         }
+        return root;
     }
 }
 
-void RightInsert(Node *node, Register x){
-    if(node -> right == NULL){
-        Node *newNode = (Node *)malloc(sizeof(Node));
-        newNode -> reg = x;
-        newNode -> left = NULL;
-        newNode -> right = NULL;
-        node -> right = newNode;
-    }
-    else{
-        if(x.key > node -> right -> reg.key){
-            RightInsert(node -> right, x);
-        }
-        else{
-            LeftInsert(node -> right, x);
-        }
-    }
-}
-
-void Insert(Tree *tree, Register x){
-    if(tree -> root == NULL){
-        Node *newNode = (Node *)malloc(sizeof(Node));
-        newNode -> reg = x;
-        newNode -> left = NULL;
-        newNode -> right = NULL;
-        tree -> root = newNode;
-    }
-    else{
-        if(x.key < tree->root->reg.key){
-            LeftInsert(tree -> root, x);
-        }
-        else{
-            RightInsert(tree -> root, x);
-        }
-    }
-}
 
 void InOrdem(Node *root){
     if(root != NULL){

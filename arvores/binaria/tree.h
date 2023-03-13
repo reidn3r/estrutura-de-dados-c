@@ -15,9 +15,11 @@ typedef struct Tree{
     Node *root;
 }Tree;
 
-void Initialize(Tree *T);
+Node *Initialize(Node *root);
 
-void Insert(Tree *tree, Register x);
+// void Insert(Tree *tree, Register x);
+
+Node *Insert(Node *root, Register x);
 
 void InOrdem(Node *root);
 
