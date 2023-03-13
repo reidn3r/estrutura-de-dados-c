@@ -25,4 +25,6 @@ void PreOrdem(Node *root);
 
 void PosOrdem(Node *root);
 
+void Conta(Node *root, int *cont);
+
 #endif

@@ -83,3 +83,11 @@ void PosOrdem(Node *root){
         printf("%d ", root -> reg.key);
     }
 }
+
+void Conta(Node *root, int *cont){
+    if(root != NULL){
+        Conta(root -> left, cont);
+        *cont = *cont+1;
+        Conta(root -> right, cont);
+    }
+}
