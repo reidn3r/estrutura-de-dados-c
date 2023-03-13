@@ -17,8 +17,6 @@ typedef struct Tree{
 
 Node *Initialize(Node *root);
 
-// void Insert(Tree *tree, Register x);
-
 Node *Insert(Node *root, Register x);
 
 void InOrdem(Node *root);

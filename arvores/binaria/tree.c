@@ -26,7 +26,6 @@ Node *Insert(Node *root, Register x){
     }
 }
 
-
 void InOrdem(Node *root){
     if(root != NULL){
         InOrdem(root -> left);

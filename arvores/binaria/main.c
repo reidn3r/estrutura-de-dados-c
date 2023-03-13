@@ -6,9 +6,7 @@ int main(){
 
     int opc;
     Register x;
-    Node *root;
-    root = Initialize(root);    
-    int s=0;
+    Node *root = Initialize(root);    
 
     do{
         printf("\n1) Insert.\n");
@@ -39,6 +37,7 @@ int main(){
         }
 
         else if(opc == 5){
+            int s=0;
             Conta(root, &s);
             printf("cont: %d\n", s);
         }
