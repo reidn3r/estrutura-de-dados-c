@@ -12,5 +12,5 @@
 - Lista Duplamente Encadeada
 - Filas
 - Pilhas
-- Arvores (em breve)
+- Arvores
 - Tabela Hash (em breve)
