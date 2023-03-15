@@ -29,4 +29,6 @@ void Minimo(Node *root, int *min);
 //Exercício 2
 void Maximo(Node *root, int *max);
 
+void ArvoreArray(Node *root, int *arr, int *idx);
+
 #endif

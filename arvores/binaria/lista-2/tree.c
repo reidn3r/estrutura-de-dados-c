@@ -89,3 +89,17 @@ void Maximo(Node *root, int *max){
         }
     }
 }
+
+/*
+     - Escreva uma função que transforme uma arvore binária de busca em um vetor com chaves em
+ordem crescente.
+*/
+
+void ArvoreArray(Node *root, int *arr, int *idx){
+    if(root != NULL){
+        ArvoreArray(root -> left, arr, idx);
+        arr[*idx] = root -> reg.key;
+        *idx = *idx +1;
+        ArvoreArray(root -> right, arr, idx);
+    }
+}
