@@ -57,3 +57,47 @@ void Conta(Node *root, int *cont){
         Conta(root -> right, cont);
     }
 }
+
+void Minimo(Node *root, int *min){
+    if(root != NULL){
+        if(*min == 0){
+            *min = root -> reg.key;
+            Minimo(root -> left, min);
+        }
+        else{
+            if(root -> reg.key < *min){
+                *min = root -> reg.key;
+                Minimo(root -> left, min);
+            }
+        }
+    }
+}
+
+void Maximo(Node *root, int *max){
+    if(root != NULL){
+        if(*max == 0){
+            *max = root -> reg.key;
+            Maximo(root -> right, max);
+        }
+        else{
+            if(root -> reg.key > *max){
+                *max = root -> reg.key;
+                Maximo(root -> right, max);
+            }
+        }
+    }
+}
+
+void Compara(Node *A, Node *B, int *resp){
+    if((A != NULL) && (B != NULL)){
+        if(A -> reg.key == B -> reg.key){
+            Compara(A -> left, B -> left, resp);
+            Compara(A -> right, B -> right, resp);
+        }
+        else{
+            *resp = 1;
+            //printf("arvores diferentes.\n");
+            printf("\n");
+        }
+    }
+}

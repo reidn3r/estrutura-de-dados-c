@@ -11,10 +11,6 @@ typedef struct Node{
     struct Node *right;
 }Node;
 
-typedef struct Tree{
-    Node *root;
-}Tree;
-
 Node *Initialize(Node *root);
 
 Node *Insert(Node *root, Register x);
@@ -26,5 +22,11 @@ void PreOrdem(Node *root);
 void PosOrdem(Node *root);
 
 void Conta(Node *root, int *cont);
+
+void Minimo(Node *root, int *min);
+
+void Maximo(Node *root, int *max);
+
+void Compara(Node *A, Node *B, int *resp);
 
 #endif
