@@ -61,9 +61,11 @@ void Conta(Node *root, int *cont){
 //Exercício 4. Compara duas árvores binárias e identifica se são iguais ou não.
 void Compara(Node *A, Node *B, int *resp){
     /*
-        - int resp: Deve ser uma variável inicializada em 0 (no arquivo main.c).
-            - se resp=0, arvores iguais.
-            - se resp=1, arvores diferentes.
+        - int resp: Variável que deve ser inicializada em 0 (no arquivo main.c)
+        e passada por referência para a função Compara.
+        
+        - se resp=0, arvores iguais.
+        - se resp=1, arvores diferentes.
     */
     if((A != NULL) && (B != NULL)){
         if(A -> reg.key == B -> reg.key){
@@ -75,5 +77,9 @@ void Compara(Node *A, Node *B, int *resp){
             //printf("arvores diferentes.\n");
             printf("\n");
         }
+    }
+    else if ((A != NULL && B == NULL) || (A == NULL && B != NULL)){
+        *resp=1;
+        printf("\n");
     }
 }
