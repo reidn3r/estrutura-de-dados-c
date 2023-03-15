@@ -44,6 +44,7 @@ int main(){
             printf("cont: %d\n", s);
         }
 
+        //Exercício 1 da lista 2
         else if(opc == 6){
             int min = 0;
             Minimo(root, &min);
@@ -55,6 +56,7 @@ int main(){
             }
         }
 
+        //Exercício 2 da lista 2
         else if(opc == 7){
             int max = 0;
             Maximo(root, &max);
@@ -83,8 +85,10 @@ int main(){
         }
     }while(opcao > 0);
 
-    /* Compara se as arvores sao iguais */
-
+    /* 
+        - Compara e verifica se as arvores sao iguais
+        - Implementação do exercício 4 da lista 1
+    */
     int diferentes=0;
     Compara(root, B, &diferentes);
     if(!diferentes){
