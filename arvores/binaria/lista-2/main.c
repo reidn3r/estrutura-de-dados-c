@@ -69,9 +69,9 @@ int main(){
         }
 }while(opc > 0);
 
-    //Exercício 3.
 
     /*
+        - Exercício 3.
         1. size: variável útil para determinar o tamanho do vetor com a função Conta
         2. idx: variável utilizada como índice do vetor alocado dinamicamente
             - Ambas devem ser inicializadas em 0

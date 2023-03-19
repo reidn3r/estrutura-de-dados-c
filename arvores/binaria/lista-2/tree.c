@@ -19,7 +19,7 @@ Node *Insert(Node *root, Register x){
         if(x.key < root->reg.key){
             root -> left = Insert(root->left, x);
         }
-        else{
+        else if(x.key > root->reg.key){
             root -> right = Insert(root -> right, x);
         }
         return root;
