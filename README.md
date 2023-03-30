@@ -13,4 +13,4 @@
 - Filas
 - Pilhas
 - Arvores
-- Tabela Hash (em breve)
+- Tabela Hash
