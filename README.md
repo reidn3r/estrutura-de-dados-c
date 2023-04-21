@@ -1,8 +1,6 @@
 <h1 align="center">💻 Estruturas de Dados em C </h1>
 
-<p align="center">Repositório contendo algoritmos de estruturas de dados </p>
-
-<h4 align="center">Semestre em andamento, novos arquivos serão adicionados</h4>
+<p align="center">Repositório que contém algoritmos de estruturas de dados </p>
 
 <hr>
   
@@ -12,5 +10,5 @@
 - Lista Duplamente Encadeada
 - Filas
 - Pilhas
-- Arvores
+- Arvores Binárias
 - Tabela Hash
