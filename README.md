@@ -10,5 +10,6 @@
 - Lista Duplamente Encadeada
 - Filas
 - Pilhas
-- Arvores Binárias
+- Arvore Binária
+- Arvore AVL
 - Tabela Hash
