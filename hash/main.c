@@ -27,9 +27,9 @@ int main(){
 
     //Insere cada caractere na tabela
     for(i; i<str_tam-1; i++){
-        if((int)chr[i] != 32){ //32: código ascii do caracter vazio (espaço)
+        if((int)chr[i] != 32){ //32: código ascii do caractere vazio (espaço)
             item.data = chr[i];
-            idx = (int)chr[i] % 13; //posição da tabela onde será add. o caracter
+            idx = (int)chr[i] % 13; //posição da tabela onde será add. o caractere
             Insere(item, &array[idx]);
         }
     }

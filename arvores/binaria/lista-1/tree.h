@@ -6,9 +6,9 @@ typedef struct{
 }Register;
 
 typedef struct Node{
-    Register reg;
     struct Node *left;
     struct Node *right;
+    Register reg;
 }Node;
 
 Node *Initialize(Node *root);
